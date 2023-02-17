@@ -1,0 +1,28 @@
+public class CalculateG {
+        public static double multi(double a, double b) {
+            return a * b;
+        }
+
+        public static double pow(double a, double b) {
+            return Math.pow(a, b);
+        }
+
+        public static double sum(double a, double b) {
+            return a + b;
+        }
+
+        public static void outline(double a, double b) {
+            System.out.println("The result is: " + a + " m" + b + " m/s");
+        }
+
+        public static void main(String[] args) {
+            double gravity = -9.81; // Earth's gravity in m/s^2
+            double fallingTime = 30;
+            double initialVelocity = 0.0;
+            double finalVelocity = multi(gravity, fallingTime) + initialVelocity;
+            double initialPosition = 0.0;
+            double finalPosition = sum(multi(0.5, multi(gravity, pow(fallingTime, 2))), sum(multi(initialVelocity, fallingTime), initialPosition));
+
+            outline(finalPosition, finalVelocity);
+        }
+    }
